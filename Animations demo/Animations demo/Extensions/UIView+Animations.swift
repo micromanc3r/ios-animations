@@ -24,7 +24,7 @@ extension UIView {
     func hideGracefully(completion: ((Bool) -> Void)?) {
         self.hideGracefully(duration: 0.2,
                             delay: 0.0,
-                            options: [.curveEaseIn],
+                            options: [.curveEaseOut],
                             completion: completion)
     }
 
@@ -60,13 +60,15 @@ extension UIView {
                        completion: completion)
     }
 
-    func bounceIn(options: UIViewAnimationOptions,
+    func bounceIn(duration: TimeInterval,
+                  delay: TimeInterval,
+                  options: UIViewAnimationOptions,
                   completion: ((Bool) -> Void)?) {
         self.alpha = 0
         self.transform = CGAffineTransform(scaleX: 0, y: 0)
 
-        UIView.animate(withDuration: 0.4,
-                       delay: 0.0,
+        UIView.animate(withDuration: duration,
+                       delay: delay,
                        options: options,
                        animations: {
                         self.alpha = 1.0
@@ -76,7 +78,9 @@ extension UIView {
     }
 
     func bounceIn(completion: ((Bool) -> Void)?) {
-        self.bounceIn(options: [.allowUserInteraction, .curveEaseOut],
+        self.bounceIn(duration: 0.4,
+                      delay: 0.0,
+                      options: [.allowUserInteraction, .curveEaseOut],
                       completion: completion)
     }
 }

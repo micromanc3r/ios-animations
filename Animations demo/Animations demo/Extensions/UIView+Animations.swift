@@ -1,0 +1,82 @@
+//
+//  UIView+Animations.swift
+//  Animations demo
+//
+//  Created by Miroslav Sliacky on 28/01/2017.
+//  Copyright © 2017 micromanc3r. All rights reserved.
+//
+
+import UIKit
+
+extension UIView {
+
+    func hideGracefully(duration: TimeInterval,
+                        delay: TimeInterval,
+                        options: UIViewAnimationOptions,
+                        completion: ((Bool) -> Void)?) {
+        self.setAlphaGracefully(alpha: 0.0,
+                                duration: duration,
+                                delay: delay,
+                                options: options,
+                                completion: completion)
+    }
+
+    func hideGracefully(completion: ((Bool) -> Void)?) {
+        self.hideGracefully(duration: 0.2,
+                            delay: 0.0,
+                            options: [.curveEaseIn],
+                            completion: completion)
+    }
+
+    func showGracefully(duration: TimeInterval,
+                        delay: TimeInterval,
+                        options: UIViewAnimationOptions,
+                        completion: ((Bool) -> Void)?) {
+        self.setAlphaGracefully(alpha: 1.0,
+                                duration: duration,
+                                delay: delay,
+                                options: options,
+                                completion: completion)
+    }
+
+    func showGracefully(completion: ((Bool) -> Void)?) {
+        self.showGracefully(duration: 0.2,
+                            delay: 0.0,
+                            options: [.curveEaseIn],
+                            completion: completion)
+    }
+
+    func setAlphaGracefully(alpha: CGFloat,
+                            duration: TimeInterval,
+                            delay: TimeInterval,
+                            options: UIViewAnimationOptions,
+                            completion: ((Bool) -> Void)?) {
+        UIView.animate(withDuration: duration,
+                       delay: delay,
+                       options: options,
+                       animations: {
+                        self.alpha = alpha
+        },
+                       completion: completion)
+    }
+
+    func bounceIn(options: UIViewAnimationOptions,
+                  completion: ((Bool) -> Void)?) {
+        self.alpha = 0
+        self.transform = CGAffineTransform(scaleX: 0, y: 0)
+
+        UIView.animate(withDuration: 0.4,
+                       delay: 0.0,
+                       options: options,
+                       animations: {
+                        self.alpha = 1.0
+                        self.transform = CGAffineTransform(scaleX: 1, y: 1)
+        },
+                       completion: completion)
+    }
+
+    func bounceIn(completion: ((Bool) -> Void)?) {
+        self.bounceIn(options: [.allowUserInteraction, .curveEaseOut],
+                      completion: completion)
+    }
+}

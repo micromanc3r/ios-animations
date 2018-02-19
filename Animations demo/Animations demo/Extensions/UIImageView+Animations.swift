@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIImageView {
-
+    
     /// Function that changes image in UIImageView in animated fashion.
     /// The animation can be modified with the parameters.
     ///
@@ -30,15 +30,15 @@ extension UIImageView {
         },
                           completion: completion)
     }
-
+    
     /// Default function to change image in UIImageView in animated fashion
     ///
     /// - Parameter image: new image to display in UIImageView
     func setImageGracefully(image: UIImage, completion: ((Bool) -> Void)? = nil) {
-        self.setImageGracefully(image: image,
-                                duration: 0.4,
-                                options: [.transitionCrossDissolve, .curveEaseOut],
-                                completion: completion)
+        setImageGracefully(image: image,
+                           duration: 0.4,
+                           options: [.transitionCrossDissolve, .curveEaseOut],
+                           completion: completion)
     }
-
+    
 }

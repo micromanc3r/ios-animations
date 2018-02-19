@@ -9,97 +9,92 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
     var isFirstImageSet = true
     var duration: TimeInterval = 0.2
     var delay: TimeInterval = 0.0
     let firstImageName = "widow01"
     let secondImageName = "widow02"
-
+    
     @IBOutlet weak var imageView01: UIImageView!
-
+    
     ////////////////////////////
     // MARK: - UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageView01.image = UIImage.init(named: "widow01")
+        
+        imageView01.image = UIImage.init(named: firstImageName)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
     ////////////////////////////
     // MARK: - Basic animations
     @IBAction func hideImageView(_ sender: Any) {
-        self.imageView01.hideGracefully(completion: nil)
+        imageView01.hideGracefully()
     }
-
+    
     @IBAction func showImageView(_ sender: Any) {
-        self.imageView01.showGracefully(completion: nil)
+        imageView01.showGracefully()
     }
-
+    
     @IBAction func bounceInImageView(_ sender: Any) {
-        self.imageView01.bounceIn(completion: nil)
+        imageView01.bounceIn()
     }
-
+    
     @IBAction func switchImage(_ sender: Any) {
-        let newImage = self.getNextImage()
+        let newImage = getNextImage()
         imageView01.setImageGracefully(image: newImage)
     }
-
+    
     ////////////////////////////
     // MARK: - Attributed animations
     @IBAction func switchImageAttributed(_ sender: Any) {
-        let newImage = self.getNextImage()
+        let newImage = getNextImage()
         imageView01.setImageGracefully(image: newImage,
-                                       duration: self.duration,
+                                       duration: duration,
                                        options: [.transitionCrossDissolve, .curveEaseOut],
                                        completion: nil)
     }
-
+    
     @IBAction func hideImageViewAttributed(_ sender: Any) {
-        self.imageView01.hideGracefully(duration: self.duration,
-                                        delay: self.delay,
-                                        options: [.curveEaseOut],
-                                        completion: nil)
+        imageView01.hideGracefully(duration: duration,
+                                   delay: delay,
+                                   options: [.curveEaseOut],
+                                   completion: nil)
     }
-
+    
     @IBAction func showImageViewAttributed(_ sender: Any) {
-        self.imageView01.showGracefully(duration: self.duration,
-                                        delay: self.delay,
-                                        options: [.curveEaseIn],
-                                        completion: nil)
+        imageView01.showGracefully(duration: duration,
+                                   delay: delay,
+                                   options: [.curveEaseIn],
+                                   completion: nil)
     }
-
+    
     @IBAction func bounceInImageViewAttributed(_ sender: Any) {
-        self.imageView01.bounceIn(duration: self.duration,
-                                  delay: self.delay,
-                                  options: [.allowUserInteraction, .curveEaseOut],
-                                  completion: nil)
+        imageView01.bounceIn(duration: duration,
+                             delay: delay,
+                             options: [.allowUserInteraction, .curveEaseOut],
+                             completion: nil)
     }
-
+    
     ////////////////////////////
     // MARK: - Attributes setup
     @IBAction func durationChanged(_ sender: UISlider) {
-        self.duration = TimeInterval(sender.value)
+        duration = TimeInterval(sender.value)
     }
-
+    
     @IBAction func delayChanged(_ sender: UISlider) {
-        self.delay = TimeInterval(sender.value)
+        delay = TimeInterval(sender.value)
     }
-
+    
     ////////////////////////////
     // MARK: - private methods
     func getNextImage() -> UIImage {
         isFirstImageSet = !isFirstImageSet
-
+        
         if isFirstImageSet {
-            return UIImage.init(named: self.firstImageName)!
+            return UIImage.init(named: firstImageName)!
         } else {
-            return UIImage.init(named: self.secondImageName)!
+            return UIImage.init(named: secondImageName)!
         }
     }
 }

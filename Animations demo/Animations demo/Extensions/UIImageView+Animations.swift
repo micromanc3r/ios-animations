@@ -21,7 +21,7 @@ extension UIImageView {
     func setImageGracefully(image: UIImage,
                             duration: TimeInterval,
                             options: UIViewAnimationOptions,
-                            completion: ((Bool) -> Void)?) {
+                            completion: ((Bool) -> Void)? = nil) {
         UIView.transition(with: self,
                           duration: duration,
                           options: options,
@@ -34,11 +34,11 @@ extension UIImageView {
     /// Default function to change image in UIImageView in animated fashion
     ///
     /// - Parameter image: new image to display in UIImageView
-    func setImageGracefully(image: UIImage) {
+    func setImageGracefully(image: UIImage, completion: ((Bool) -> Void)? = nil) {
         self.setImageGracefully(image: image,
                                 duration: 0.4,
                                 options: [.transitionCrossDissolve, .curveEaseOut],
-                                completion: nil)
+                                completion: completion)
     }
 
 }

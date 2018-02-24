@@ -12,8 +12,8 @@
 		200F87101E393EDB00576751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200F870E1E393EDB00576751 /* Main.storyboard */; };
 		200F87121E393EDC00576751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 200F87111E393EDC00576751 /* Assets.xcassets */; };
 		200F87151E393EDC00576751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200F87131E393EDC00576751 /* LaunchScreen.storyboard */; };
-		20E8D9B01E3D502A002ED947 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8D9AF1E3D502A002ED947 /* UIView+Animations.swift */; };
-		20E8D9B21E3D53BB002ED947 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8D9B11E3D53BB002ED947 /* UIImageView+Animations.swift */; };
+		20FB3C252041DCB200DCE648 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3C232041DCB200DCE648 /* UIImageView+Animations.swift */; };
+		20FB3C262041DCB200DCE648 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3C242041DCB200DCE648 /* UIView+Animations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +24,8 @@
 		200F87111E393EDC00576751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		200F87141E393EDC00576751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		200F87161E393EDC00576751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20E8D9AF1E3D502A002ED947 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "Extensions/UIView+Animations.swift"; sourceTree = "<group>"; };
-		20E8D9B11E3D53BB002ED947 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Animations.swift"; path = "Extensions/UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		20FB3C232041DCB200DCE648 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Animations.swift"; path = "../../Extensions/UIImageView+Animations.swift"; sourceTree = "<group>"; };
+		20FB3C242041DCB200DCE648 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "../../Extensions/UIView+Animations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +72,8 @@
 		20E8D9AD1E3D4D2D002ED947 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				20E8D9AF1E3D502A002ED947 /* UIView+Animations.swift */,
-				20E8D9B11E3D53BB002ED947 /* UIImageView+Animations.swift */,
+				20FB3C232041DCB200DCE648 /* UIImageView+Animations.swift */,
+				20FB3C242041DCB200DCE648 /* UIView+Animations.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -178,9 +178,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				200F870D1E393EDB00576751 /* MainViewController.swift in Sources */,
-				20E8D9B21E3D53BB002ED947 /* UIImageView+Animations.swift in Sources */,
 				200F870B1E393EDB00576751 /* AppDelegate.swift in Sources */,
-				20E8D9B01E3D502A002ED947 /* UIView+Animations.swift in Sources */,
+				20FB3C252041DCB200DCE648 /* UIImageView+Animations.swift in Sources */,
+				20FB3C262041DCB200DCE648 /* UIView+Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

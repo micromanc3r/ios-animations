@@ -14,10 +14,21 @@
 		200F87151E393EDC00576751 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 200F87131E393EDC00576751 /* LaunchScreen.storyboard */; };
 		20FB3C252041DCB200DCE648 /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3C232041DCB200DCE648 /* UIImageView+Animations.swift */; };
 		20FB3C262041DCB200DCE648 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3C242041DCB200DCE648 /* UIView+Animations.swift */; };
+		20FB3C2E2042077000DCE648 /* AnimationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB3C2D2042077000DCE648 /* AnimationsTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		20FB3C302042077000DCE648 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 200F86FF1E393EDB00576751 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 200F87061E393EDB00576751;
+			remoteInfo = "Animations demo";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		200F87071E393EDB00576751 /* Animations demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Animations demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		200F87071E393EDB00576751 /* AnimationsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		200F870A1E393EDB00576751 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		200F870C1E393EDB00576751 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		200F870F1E393EDB00576751 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,10 +37,20 @@
 		200F87161E393EDC00576751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20FB3C232041DCB200DCE648 /* UIImageView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Animations.swift"; path = "../../Extensions/UIImageView+Animations.swift"; sourceTree = "<group>"; };
 		20FB3C242041DCB200DCE648 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "../../Extensions/UIView+Animations.swift"; sourceTree = "<group>"; };
+		20FB3C2B2042076F00DCE648 /* AnimationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FB3C2D2042077000DCE648 /* AnimationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTests.swift; sourceTree = "<group>"; };
+		20FB3C2F2042077000DCE648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		200F87041E393EDB00576751 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FB3C282042076F00DCE648 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,7 +63,8 @@
 		200F86FE1E393EDB00576751 = {
 			isa = PBXGroup;
 			children = (
-				200F87091E393EDB00576751 /* Animations demo */,
+				200F87091E393EDB00576751 /* AnimationsDemo */,
+				20FB3C2C2042077000DCE648 /* AnimationsTests */,
 				200F87081E393EDB00576751 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,12 +72,13 @@
 		200F87081E393EDB00576751 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				200F87071E393EDB00576751 /* Animations demo.app */,
+				200F87071E393EDB00576751 /* AnimationsDemo.app */,
+				20FB3C2B2042076F00DCE648 /* AnimationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		200F87091E393EDB00576751 /* Animations demo */ = {
+		200F87091E393EDB00576751 /* AnimationsDemo */ = {
 			isa = PBXGroup;
 			children = (
 				20E8D9AD1E3D4D2D002ED947 /* Extensions */,
@@ -66,7 +89,7 @@
 				200F87131E393EDC00576751 /* LaunchScreen.storyboard */,
 				200F87161E393EDC00576751 /* Info.plist */,
 			);
-			path = "Animations demo";
+			path = AnimationsDemo;
 			sourceTree = "<group>";
 		};
 		20E8D9AD1E3D4D2D002ED947 /* Extensions */ = {
@@ -86,12 +109,21 @@
 			name = "Demo controllers";
 			sourceTree = "<group>";
 		};
+		20FB3C2C2042077000DCE648 /* AnimationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				20FB3C2D2042077000DCE648 /* AnimationsTests.swift */,
+				20FB3C2F2042077000DCE648 /* Info.plist */,
+			);
+			path = AnimationsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		200F87061E393EDB00576751 /* Animations demo */ = {
+		200F87061E393EDB00576751 /* AnimationsDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 200F87191E393EDC00576751 /* Build configuration list for PBXNativeTarget "Animations demo" */;
+			buildConfigurationList = 200F87191E393EDC00576751 /* Build configuration list for PBXNativeTarget "AnimationsDemo" */;
 			buildPhases = (
 				200F871C1E394AE700576751 /* ShellScript */,
 				200F87031E393EDB00576751 /* Sources */,
@@ -102,10 +134,28 @@
 			);
 			dependencies = (
 			);
-			name = "Animations demo";
+			name = AnimationsDemo;
 			productName = "Animations demo";
-			productReference = 200F87071E393EDB00576751 /* Animations demo.app */;
+			productReference = 200F87071E393EDB00576751 /* AnimationsDemo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		20FB3C2A2042076F00DCE648 /* AnimationsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20FB3C322042077000DCE648 /* Build configuration list for PBXNativeTarget "AnimationsTests" */;
+			buildPhases = (
+				20FB3C272042076F00DCE648 /* Sources */,
+				20FB3C282042076F00DCE648 /* Frameworks */,
+				20FB3C292042076F00DCE648 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20FB3C312042077000DCE648 /* PBXTargetDependency */,
+			);
+			name = AnimationsTests;
+			productName = AnimationsTests;
+			productReference = 20FB3C2B2042076F00DCE648 /* AnimationsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -113,7 +163,7 @@
 		200F86FF1E393EDB00576751 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = micromanc3r;
 				TargetAttributes = {
@@ -123,9 +173,15 @@
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
+					20FB3C2A2042076F00DCE648 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 65NTCVYUA7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 200F87061E393EDB00576751;
+					};
 				};
 			};
-			buildConfigurationList = 200F87021E393EDB00576751 /* Build configuration list for PBXProject "Animations demo" */;
+			buildConfigurationList = 200F87021E393EDB00576751 /* Build configuration list for PBXProject "AnimationsDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -138,7 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				200F87061E393EDB00576751 /* Animations demo */,
+				200F87061E393EDB00576751 /* AnimationsDemo */,
+				20FB3C2A2042076F00DCE648 /* AnimationsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -151,6 +208,13 @@
 				200F87151E393EDC00576751 /* LaunchScreen.storyboard in Resources */,
 				200F87121E393EDC00576751 /* Assets.xcassets in Resources */,
 				200F87101E393EDB00576751 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20FB3C292042076F00DCE648 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +248,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		20FB3C272042076F00DCE648 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20FB3C2E2042077000DCE648 /* AnimationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20FB3C312042077000DCE648 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 200F87061E393EDB00576751 /* AnimationsDemo */;
+			targetProxy = 20FB3C302042077000DCE648 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		200F870E1E393EDB00576751 /* Main.storyboard */ = {
@@ -316,7 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ASQC376HCN;
-				INFOPLIST_FILE = "Animations demo/Info.plist";
+				INFOPLIST_FILE = AnimationsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.micro.animations-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,7 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ASQC376HCN;
-				INFOPLIST_FILE = "Animations demo/Info.plist";
+				INFOPLIST_FILE = AnimationsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.micro.animations-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,10 +419,54 @@
 			};
 			name = Release;
 		};
+		20FB3C332042077000DCE648 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65NTCVYUA7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AnimationsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micromancer.AnimationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationsDemo.app/AnimationsDemo";
+			};
+			name = Debug;
+		};
+		20FB3C342042077000DCE648 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 65NTCVYUA7;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = AnimationsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.micromancer.AnimationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimationsDemo.app/AnimationsDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		200F87021E393EDB00576751 /* Build configuration list for PBXProject "Animations demo" */ = {
+		200F87021E393EDB00576751 /* Build configuration list for PBXProject "AnimationsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				200F87171E393EDC00576751 /* Debug */,
@@ -351,11 +475,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		200F87191E393EDC00576751 /* Build configuration list for PBXNativeTarget "Animations demo" */ = {
+		200F87191E393EDC00576751 /* Build configuration list for PBXNativeTarget "AnimationsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				200F871A1E393EDC00576751 /* Debug */,
 				200F871B1E393EDC00576751 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20FB3C322042077000DCE648 /* Build configuration list for PBXNativeTarget "AnimationsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20FB3C332042077000DCE648 /* Debug */,
+				20FB3C342042077000DCE648 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
